@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.003871">
+<testcase classname="Basic Math" name="Addition of two numbers" time="0.003743">
+<system-out><![CDATA[Given The number "1"........................................................passed
+When "1" is added the total.................................................passed
+Then The result is "2"......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Basic Math" name="Addition of two numbers incorrectly" time="0.000128">
+<system-out><![CDATA[Given The number "2"........................................................passed
+When "3" is added the total.................................................passed
+Then The result is "5"......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -25,8 +25,7 @@ public class SearchResultPage {
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, TEST_CONF.getAjaxWaitSeconds()), this);
-        new WebDriverWait(driver, TEST_CONF.getAjaxWaitSeconds())
-                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#search li")));
+        new WebDriverWait(driver, TEST_CONF.getAjaxWaitSeconds()).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#search li")));
     }
 
     public String getTermFromTitle() {

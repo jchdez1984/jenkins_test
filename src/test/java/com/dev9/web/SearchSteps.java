@@ -10,7 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.fest.assertions.api.Fail.fail;
@@ -28,7 +28,8 @@ public class SearchSteps {
 
     @Before({"@requires_browser"})
     public void buildDriver() {
-        driver = new HtmlUnitDriver();
+        System.setProperty("webdriver.gecko.driver", "lib/geckodriver");
+        driver = new FirefoxDriver();
     }
 
     @After({"@requires_browser"})
@@ -52,10 +53,6 @@ public class SearchSteps {
     public void I_submit_the_search_by_pressing(String submitType) throws Throwable {
         verifyCurrentPage(SearchQueryPage.class);
         switch (submitType.toLowerCase()) {
-            case "enter":
-            case "enter key":
-                currentPage = ((SearchQueryPage) currentPage).pressEnterInQuery();
-                break;
             case "search":
             case "google search":
             case "google search button":
