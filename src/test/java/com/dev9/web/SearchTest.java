@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(format = {"pretty", "html:target/Destination"})
+@CucumberOptions(format = {"pretty", "json:target/cucumber.json"})
 public class SearchTest {
 
 }
